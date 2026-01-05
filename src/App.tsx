@@ -25,7 +25,7 @@ function App() {
         >
           Computer Science Graduate from NJIT
         </h2>
-
+          {/* ===== About SECTION ===== */}
         <About />
 
         <div style={{ marginTop: "2rem" }}>
