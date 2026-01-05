@@ -62,6 +62,7 @@ export default function Projects() {
           title="FORTRAN-95 Interpreter"
           description="Lexer, parser, and interpreter for a subset of FORTRAN-95."
           tech={["C++", "Parsing", "Compilers"]}
+          github="https://github.com/Marco-Scherillo/interpreter"
         />
       </div>
     </section>
