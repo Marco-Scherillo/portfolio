@@ -30,12 +30,14 @@ export default function Projects() {
           title="SPL-Tool (FDA XML Parser)"
           description="Backend tool for parsing FDA Structured Product Label XML files and reconstructing tables."
           tech={["Python", "Flask", "XML", "DOCX"]}
+          github="https://github.com/peterfarg/SPL-Tool"
         />
 
         <ProjectCard
           title="Flight Data Analysis with Hadoop MapReduce"
           description="Processed 22 years of U.S. flight data using Hadoop MapReduce on a 10-node Amazon EC2 cluster to analyze airline performance trends."
           tech={["Java", "Hadoop", "MapReduce", "AWS EC2"]}
+          github="https://github.com/Marco-Scherillo/Flight-project"
         />
 
         <ProjectCard
@@ -53,6 +55,7 @@ export default function Projects() {
           title="RESTful Shopping Cart API"
           description="Developed a RESTful shopping cart API using FastAPI, supporting product management and cart operations."
           tech={["Python", "FastAPI", "REST", "Backend"]}
+          github="https://github.com/Marco-Scherillo/Shopping-cart-Api"
         />
 
         <ProjectCard
