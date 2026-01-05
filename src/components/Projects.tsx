@@ -2,12 +2,12 @@ import ProjectCard from "./ProjectCard";
 
 export default function Projects() {
   return (
-    <section style={{ marginTop: "4rem" }}>
-      <h2 style={{ fontSize: "2rem", marginBottom: "1.5rem" }}>
+    <section className="mt-16">
+      <h2 className="text-3xl font-semibold mb-6">
         Projects
       </h2>
 
-      <div style={{ display: "grid", gap: "1.5rem" }}>
+      <div className="grid gap-6">
         <ProjectCard
           title="A* 4x4 Puzzle Solver"
           description="Implemented the A* search algorithm in C to solve a 4x4 sliding puzzle using admissible heuristics."
