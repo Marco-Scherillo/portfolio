@@ -6,6 +6,3 @@ run linter: npm run lint
 auto fix issues: npm run lint -- --fix
 format code with prittier: npx prettier --write .
 build for production: npm run build
-
-##TODO
-add tailwind and make things prettier. 

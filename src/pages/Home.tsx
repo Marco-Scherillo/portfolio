@@ -6,9 +6,7 @@ export default function Home() {
     <main className="max-w-[900px] mx-auto px-4 py-12">
       {/* ===== HEADER SECTION ===== */}
       <section>
-        <h1 className="text-5xl font-bold mb-2">
-          Marco Scherillo
-        </h1>
+        <h1 className="text-5xl font-bold mb-2">Marco Scherillo</h1>
 
         <h2 className="text-xl font-normal text-gray-500">
           Computer Science Graduate from NJIT

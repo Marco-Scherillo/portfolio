@@ -4,10 +4,10 @@ export default function About() {
       <h2 style={{ fontSize: "2rem", marginBottom: "1rem" }}>About Me</h2>
 
       <p style={{ maxWidth: "700px", lineHeight: 1.6 }}>
-        I’m a senior computer science student at NJIT with experience building
-        full-stack applications, distributed systems, and data-driven tools.
-        I enjoy working on challenging problems and turning ideas into
-        reliable software.
+        I’m a computer science graduate from NJIT with experience building
+        full-stack applications, distributed systems, and data-driven tools. I
+        enjoy working on challenging problems and turning ideas into reliable
+        software.
       </p>
 
       <p style={{ maxWidth: "700px", lineHeight: 1.6, marginTop: "1rem" }}>

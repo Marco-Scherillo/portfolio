@@ -14,18 +14,33 @@ export default function ProjectCard({
   demo,
 }: ProjectCardProps) {
   return (
-    <div className="border border-gray-200 p-6 rounded-lg">
-      <h3 className="text-xl font-semibold mb-2">
-        {title}
-      </h3>
+    <div
+      className="
+    group
+    rounded-xl
+    border border-gray-200
+   bg-white
+    p-6
+    shadow-sm
+    transition
+    hover:-translate-y-1
+    hover:shadow-lg
+    "
+    >
+      <h3 className="text-xl font-semibold tracking-tight mb-2">{title}</h3>
 
-      <p className="text-gray-700 mb-3">
-        {description}
-      </p>
+      <p className="text-gray-600 leading-relaxed mb-4">{description}</p>
 
-      <p className="text-sm text-gray-500">
-        <strong>Tech:</strong> {tech.join(", ")}
-      </p>
+      <div className="mt-3 flex flex-wrap gap-2">
+        {tech.map((t) => (
+          <span
+            key={t}
+            className="rounded-full bg-gray-100 px-3 py-1 text-xs font-medium text-gray-600"
+          >
+            {t}
+          </span>
+        ))}
+      </div>
 
       <div className="mt-4">
         {github && (

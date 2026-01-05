@@ -3,11 +3,9 @@ import ProjectCard from "./ProjectCard";
 export default function Projects() {
   return (
     <section className="mt-16">
-      <h2 className="text-3xl font-semibold mb-6">
-        Projects
-      </h2>
+      <h2 className="text-3xl font-semibold mb-6">Projects</h2>
 
-      <div className="grid gap-6">
+      <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
         <ProjectCard
           title="A* 4x4 Puzzle Solver"
           description="Implemented the A* search algorithm in C to solve a 4x4 sliding puzzle using admissible heuristics."
@@ -25,7 +23,7 @@ export default function Projects() {
         <ProjectCard
           title="DigiDex – Yu-Gi-Oh Card Scanner"
           description="Android app that scans Yu-Gi-Oh cards using OCR and stores collections locally."
-          tech={["Android", "Java", "OCR"]}
+          tech={["Android", "Kotlin", "OCR"]}
         />
 
         <ProjectCard
@@ -35,9 +33,9 @@ export default function Projects() {
         />
 
         <ProjectCard
-          title="Hadoop MapReduce Word Frequency Analyzer"
-          description="Pairs-based MapReduce program computing relative word frequencies from large datasets."
-          tech={["Java", "Hadoop", "MapReduce"]}
+          title="Flight Data Analysis with Hadoop MapReduce"
+          description="Processed 22 years of U.S. flight data using Hadoop MapReduce on a 10-node Amazon EC2 cluster to analyze airline performance trends."
+          tech={["Java", "Hadoop", "MapReduce", "AWS EC2"]}
         />
 
         <ProjectCard
@@ -51,23 +49,16 @@ export default function Projects() {
           description="Multithreaded C program approximating Pi and analyzing performance across threads."
           tech={["C", "Pthreads", "Concurrency"]}
         />
+        <ProjectCard
+  title="RESTful Shopping Cart API"
+  description="Developed a RESTful shopping cart API using FastAPI, supporting product management and cart operations."
+  tech={["Python", "FastAPI", "REST", "Backend"]}
+/>
 
         <ProjectCard
           title="FORTRAN-95 Interpreter"
           description="Lexer, parser, and interpreter for a subset of FORTRAN-95."
-          tech={["Python", "Parsing", "Compilers"]}
-        />
-
-        <ProjectCard
-          title="Covey.Town Multiplayer App"
-          description="Full-stack multiplayer web app with real-time interaction and REST APIs."
-          tech={["Node.js", "TypeScript", "React"]}
-        />
-
-        <ProjectCard
-          title="Airline Delay Analytics Pipeline"
-          description="Hadoop and Oozie pipeline analyzing airline on-time performance data."
-          tech={["Hadoop", "Oozie", "Hive", "Pig"]}
+          tech={["C++", "Parsing", "Compilers"]}
         />
       </div>
     </section>
