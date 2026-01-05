@@ -14,7 +14,9 @@ export default function ProjectCard({
   demo,
 }: ProjectCardProps) {
   return (
-    <div style={{ border: "1px solid #ddd", padding: "1.5rem", borderRadius: 8 }}>
+    <div
+      style={{ border: "1px solid #ddd", padding: "1.5rem", borderRadius: 8 }}
+    >
       <h3 style={{ marginBottom: "0.5rem" }}>{title}</h3>
       <p style={{ marginBottom: "0.75rem" }}>{description}</p>
 
