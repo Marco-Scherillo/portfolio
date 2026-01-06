@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 export default function Home() {
   return (
-    <main className="relative min-h-screen overflow-hidden bg-linear-to-br from-gray-50 via-white to-gray-100">
+<main className="relative min-h-screen overflow-hidden bg-linear-to-br from-gray-50 via-white to-gray-100">
       {/* ===== LINK TO BLOG ===== */}
       <Link
         to="/blog"
@@ -41,6 +41,22 @@ export default function Home() {
       />
 
       <div className="relative max-w-[900px] mx-auto px-4 py-16">
+        {/* ===== SIDE ACCENTS ===== */}
+<div className="hidden lg:block absolute left-8 top-32 h-[60%] w-px bg-gray-200" />
+<div className="hidden lg:block absolute right-8 top-32 h-[60%] w-px bg-gray-200" />
+
+<div
+  className="
+    hidden lg:block
+    absolute left-4 top-1/2
+    -translate-y-1/2
+    -rotate-90
+    text-xs tracking-widest text-gray-400
+  "
+>
+  COMPUTER SCIENCE
+</div>
+
         {/* ===== HERO / HEADER ===== */}
         <section className="mb-20">
           <div className="flex items-center gap-4 mb-6">
