@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 export default function Home() {
   return (
-<main className="relative min-h-screen overflow-hidden bg-linear-to-br from-gray-50 via-white to-gray-100">
+    <main className="relative min-h-screen overflow-hidden bg-linear-to-br from-gray-50 via-white to-gray-100">
       {/* ===== LINK TO BLOG ===== */}
       <Link
         to="/blog"
@@ -41,30 +41,28 @@ export default function Home() {
       />
 
       <div className="relative max-w-[900px] mx-auto px-4 py-16">
-
-<div
-  className="
+        <div
+          className="
     hidden lg:block
     absolute left-4 top-1/2
     -translate-y-1/2
     -rotate-90
     text-xs tracking-widest text-gray-400
   "
->
-</div>
+        ></div>
 
         {/* ===== HERO / HEADER ===== */}
         <section className="mb-20">
-          <div className="flex items-center gap-4 mb-6">
-            <img
-              src={njitSeal}
-              alt="NJIT Seal"
-              className="h-10 w-10 sm:h-12 sm:w-12 object-contain"
-            />
-
+          <div className="flex items-center gap-2 mb-6">
             <h1 className="text-5xl sm:text-6xl font-bold tracking-tight">
               Marco Scherillo
             </h1>
+
+            <img
+              src={njitSeal}
+              alt="NJIT Seal"
+              className="h-7 w-7 sm:h-8 sm:w-8 object-contain"
+            />
           </div>
 
           <About />
