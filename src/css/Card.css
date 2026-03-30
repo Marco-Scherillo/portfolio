@@ -1,0 +1,128 @@
+.card {
+  max-width: 100%;
+  background: linear-gradient(
+    135deg,
+    rgba(30, 30, 30, 0.9),
+    rgba(45, 45, 60, 0.9)
+  ); 
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.7);
+  background: linear-gradient(
+    135deg,
+    rgba(30, 30, 30, 1),
+    rgba(60, 60, 80, 1)
+  );
+}
+
+.card-img-wrapper {
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  border-radius: 12px 0 0 12px;
+  overflow: hidden;
+  background-color: transparent; 
+}
+
+.card-img-custom {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-subtitle {
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 0.5rem;
+}
+
+.btn-outline-primary,
+.btn-outline-success {
+  border-radius: 6px;
+  background-color: rgba(255, 255, 255, 0.05);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-outline-primary {
+  color: #0077ff;
+  border-color: #0077ff;
+}
+
+.btn-outline-primary:hover {
+  background-color: rgba(0, 119, 255, 0.2);
+  color: #fff;
+}
+
+.btn-outline-success {
+  color: #28a745;
+  border-color: #28a745;
+}
+
+.btn-outline-success:hover {
+  background-color: rgba(40, 167, 69, 0.2);
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .card-img-wrapper {
+    border-radius: 12px 12px 0 0;
+  }
+}
+
+.mobile-toggle-btn {
+  background: none;
+  border: none;
+  color: #0077ff;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+.mobile-btn-wrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.mobile-toggle-btn .arrow {
+  display: inline-block;
+  margin-right: 5px;
+  transition: transform 0.3s ease;
+}
+
+.mobile-toggle-btn.active .arrow {
+  transform: rotate(180deg);
+}
+
+.mobile-description {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, padding 0.4s ease;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.mobile-description.show {
+  max-height: 500px;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+@media (min-width: 769px) {
+  .mobile-toggle-btn {
+    display: none;
+  }
+  .mobile-description {
+    max-height: none !important;
+    padding: 0.5rem 0 !important;
+  }
+}

@@ -2,10 +2,18 @@ import ProjectCard from "./ProjectCard";
 
 export default function Projects() {
   return (
-    <section className="mt-16">
-      <h2 className="text-3xl font-semibold mb-6">Projects</h2>
+    <section id="projects" className="mt-16">
+      <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+        <div>
+          <h2 className="text-3xl font-semibold text-slate-950">Projects</h2>
+          <p className="mt-3 max-w-2xl text-sm leading-7 text-slate-600">
+            Selected projects from coursework, internships, and personal builds that demonstrate backend systems, mobile experiences, and real-world engineering.
+          </p>
+        </div>
+        <p className="text-sm text-slate-500">More work available on GitHub.</p>
+      </div>
 
-      <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         <ProjectCard
           title="A* 4x4 Puzzle Solver"
           description="Implemented the A* search algorithm in C to solve a 4x4 sliding puzzle using admissible heuristics."
@@ -46,7 +54,6 @@ export default function Projects() {
           description="Parallel matrix multiplication using MPI with distributed computation."
           tech={["C", "MPI", "Parallel Computing"]}
         />
-
         <ProjectCard
           title="Pthreads Pi Approximation"
           description="Multithreaded C program approximating Pi and analyzing performance across threads."
@@ -58,7 +65,6 @@ export default function Projects() {
           tech={["Python", "FastAPI", "REST", "Backend"]}
           github="https://github.com/Marco-Scherillo/Shopping-cart-Api"
         />
-
         <ProjectCard
           title="FORTRAN-95 Interpreter"
           description="Lexer, parser, and interpreter for a subset of FORTRAN-95."

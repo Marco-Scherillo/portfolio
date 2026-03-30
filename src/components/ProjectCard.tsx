@@ -19,7 +19,7 @@ export default function ProjectCard({
     group
     rounded-xl
     border border-gray-200
-   bg-white
+   bg-black/5
     p-6
     shadow-sm
     transition

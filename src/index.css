@@ -4,11 +4,19 @@
 @tailwind utilities;
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
-    @apply bg-white text-zinc-900 antialiased;
+    @apply bg-slate-950 text-slate-100 antialiased;
   }
 
   a {
-    @apply text-blue-600 hover:underline;
+    @apply text-sky-400 hover:text-sky-300;
+  }
+
+  ::selection {
+    @apply bg-sky-500/30 text-slate-100;
   }
 }
