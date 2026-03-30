@@ -82,7 +82,7 @@ export default function Home() {
                   <span className="ml-2 text-sm">LinkedIn</span>
                 </a>
                 <a
-                  href="mailto:marcoscherillo98@gmail.com"
+                  href="mailto:marcoscherillo98@gmail.com"  
                   className="inline-flex items-center justify-center rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-slate-100 transition hover:bg-white/10"
                 >
                   <FaEnvelope size={18} />
