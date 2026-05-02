@@ -5,31 +5,37 @@ export default function About() {
         <div>
           <p className="text-sm uppercase tracking-[0.28em] text-sky-500">About me</p>
           <h2 className="mt-4 text-3xl font-semibold tracking-tight text-slate-950">
-            Software engineering with a practical, product-first focus.
+            Curious by nature, engineering by choice.
           </h2>
           <div className="mt-6 space-y-5 text-base leading-8 text-slate-600">
             <p>
-              I’m a Computer Science graduate from NJIT who enjoys turning complex ideas into polished, useful applications. My experience spans full-stack development, distributed systems, and data-driven tooling.
+              I got into computer science because I wanted to understand how things work at every layer — not just
+              use them. That curiosity pushed me through NJIT's CS program and into an internship where I shipped
+              production features for hundreds of users across a full agile cycle.
             </p>
             <p>
-              I’ve shipped features across the entire stack, built intuitive user interfaces, and helped teams move faster through clean architecture. Outside of code, I love music and staying active.
+              What I've learned is that the hardest part of software isn't writing code — it's understanding the
+              problem clearly enough to write the <em>right</em> code. I gravitate toward work that requires
+              thinking at multiple levels: data modeling, architecture, and the small details that make a product
+              feel solid.
             </p>
           </div>
         </div>
 
-        <div className="space-y-4 rounded-3xl border border-slate-200/80 bg-slate-50 p-6 text-slate-700 shadow-sm">
+        <div className="space-y-5 rounded-3xl border border-slate-200/80 bg-slate-50 p-6 text-slate-700 shadow-sm">
           <div>
-            <p className="text-sm uppercase tracking-[0.24em] text-slate-400">What I work on</p>
+            <p className="text-sm uppercase tracking-[0.24em] text-slate-400">Background</p>
             <p className="mt-3 text-base leading-7">
-              Full-stack apps, responsive interfaces, APIs, and backend systems with a focus on reliability and user experience.
+              CS degree from NJIT, a software engineering internship at Merck Pharmaceuticals, and projects spanning
+              distributed computing, mobile development, and the web.
             </p>
           </div>
           <div>
-            <p className="text-sm uppercase tracking-[0.24em] text-slate-400">Strengths</p>
+            <p className="text-sm uppercase tracking-[0.24em] text-slate-400">Currently exploring</p>
             <ul className="mt-3 space-y-2 text-base leading-7 list-disc list-inside">
-              <li>React & TypeScript frontend development</li>
-              <li>Backend services and database design</li>
-              <li>Clean, maintainable code and agile collaboration</li>
+              <li>Spring Boot & backend architecture</li>
+              <li>System design and distributed systems</li>
+              <li>Developer tooling and open source</li>
             </ul>
           </div>
         </div>

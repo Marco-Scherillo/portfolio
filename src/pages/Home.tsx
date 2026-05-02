@@ -11,6 +11,12 @@ const scrollToSection = (sectionId: string, event: MouseEvent<HTMLAnchorElement>
   section?.scrollIntoView({ behavior: "smooth", block: "start" });
 };
 
+const SKILL_GROUPS = [
+  { label: "Languages", items: ["C", "C++", "Java", "Python", "TypeScript", "JavaScript", "Kotlin"] },
+  { label: "Frameworks & Libraries", items: ["React", "FastAPI", "Express.js", "NumPy", "Pandas", "Scikit-learn"] },
+  { label: "Infrastructure & Tools", items: ["Hadoop", "Amazon EC2", "MongoDB", "MySQL", "Git", "Linux", "JIRA"] },
+];
+
 export default function Home() {
   return (
     <main className="relative min-h-screen bg-slate-950 text-slate-100">
@@ -27,20 +33,22 @@ export default function Home() {
           Blog
         </Link>
 
+        {/* ── Hero ── */}
         <section className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-slate-900/90 p-8 shadow-2xl shadow-slate-950/40 backdrop-blur sm:p-12">
           <div className="grid gap-10 lg:grid-cols-[1.9fr_1.1fr] lg:items-center">
             <div>
-              <div className="inline-flex items-center gap-3 rounded-full bg-white/10 px-4 py-2 text-sm text-sky-200 ring-1 ring-white/10">
-                <span className="font-semibold">NJIT Graduate • Software Engineer</span>
+              <div className="inline-flex items-center gap-2.5 rounded-full bg-white/10 px-4 py-2 text-sm text-sky-200 ring-1 ring-white/10">
+                <span className="h-2 w-2 rounded-full bg-emerald-400 animate-pulse" />
+                <span className="font-semibold">NJIT Graduate · Open to Full-Time Roles</span>
               </div>
 
-              <h1 className="mt-8 text-4xl font-semibold tracking-tight text-white sm:text-5xl lg:text-6xl">
+              <h1 className="mt-8 text-4xl font-semibold tracking-tight bg-gradient-to-br from-white via-slate-100 to-slate-400 bg-clip-text text-transparent sm:text-5xl lg:text-6xl">
                 Marco Scherillo
               </h1>
 
               <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-300">
-                I build polished full-stack products, thoughtful web experiences, and production-ready systems using React,
-                TypeScript, and modern software engineering practices.
+                I specialize in end-to-end software engineering — from low-level algorithms and distributed systems
+                to intuitive, responsive interfaces. I care about code that ships and software that lasts.
               </p>
 
               <div className="mt-10 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
@@ -82,7 +90,7 @@ export default function Home() {
                   <span className="ml-2 text-sm">LinkedIn</span>
                 </a>
                 <a
-                  href="mailto:marcoscherillo98@gmail.com"  
+                  href="mailto:marcoscherillo98@gmail.com"
                   className="inline-flex items-center justify-center rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-slate-100 transition hover:bg-white/10"
                 >
                   <FaEnvelope size={18} />
@@ -91,6 +99,7 @@ export default function Home() {
               </div>
             </div>
 
+            {/* ── Snapshot card ── */}
             <div className="rounded-[2rem] border border-white/10 bg-slate-950/90 p-8 shadow-xl shadow-slate-950/30">
               <div className="flex items-center gap-4">
                 <img
@@ -100,18 +109,25 @@ export default function Home() {
                 />
                 <div>
                   <p className="text-sm uppercase tracking-[0.24em] text-sky-300">Computer Science</p>
-                  <p className="mt-2 text-2xl font-semibold text-white">NJIT</p>
+                  <p className="mt-1 text-xl font-semibold text-white">NJIT · Class of 2025</p>
                 </div>
               </div>
 
-              <div className="mt-8 space-y-4 text-slate-300">
-                <div>
-                  <p className="text-sm uppercase tracking-[0.24em] text-slate-400">Focus</p>
-                  <p className="mt-2 text-base">Full-stack development, scalable systems, and polished user experiences.</p>
+              <div className="mt-6 space-y-3">
+                <div className="rounded-xl border border-white/10 bg-white/5 px-4 py-3">
+                  <p className="text-xs uppercase tracking-widest text-slate-400">Recent Experience</p>
+                  <p className="mt-1 text-sm font-medium text-slate-200">Merck Pharmaceuticals</p>
+                  <p className="text-xs text-slate-400">Software Eng. Capstone Intern · Fall 2025</p>
                 </div>
-                <div>
-                  <p className="text-sm uppercase tracking-[0.24em] text-slate-400">Experience</p>
-                  <p className="mt-2 text-base">Interned in full-stack development and delivered product-ready solutions.</p>
+                <div className="flex gap-3">
+                  <div className="flex-1 rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-center">
+                    <p className="text-2xl font-bold text-white">9</p>
+                    <p className="text-xs text-slate-400">Projects</p>
+                  </div>
+                  <div className="flex-1 rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-center">
+                    <p className="text-2xl font-bold text-emerald-400">Open</p>
+                    <p className="text-xs text-slate-400">to hire</p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -120,49 +136,41 @@ export default function Home() {
 
         <About />
 
+        {/* ── Skills ── */}
         <div className="mt-20 rounded-[2rem] border border-slate-200/20 bg-white/90 p-8 shadow-xl shadow-slate-950/10">
-          <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
-            <div>
-              <h2 className="text-3xl font-semibold text-slate-950">Skills</h2>
-              <p className="mt-3 max-w-2xl text-slate-600">
-                A strong toolkit for frontend, backend, and systems work with a focus on reliable code and fast iteration.
-              </p>
-            </div>
-            <div className="grid w-full gap-3 sm:grid-cols-2 lg:grid-cols-3">
-              {[
-                "React",
-                "TypeScript",
-                "Java",
-                "Python",
-                "SQL",
-                "Kotlin",
-                "Node.js",
-                "REST APIs",
-                "Tailwind CSS",
-              ].map((skill) => (
-                <span
-                  key={skill}
-                  className="inline-flex items-center justify-center rounded-full border border-slate-200/80 bg-slate-100 px-4 py-2 text-sm font-medium text-slate-700"
-                >
-                  {skill}
-                </span>
-              ))}
-            </div>
+          <h2 className="text-3xl font-semibold text-slate-950">Skills</h2>
+          <div className="mt-8 grid gap-8 sm:grid-cols-3">
+            {SKILL_GROUPS.map(({ label, items }) => (
+              <div key={label}>
+                <p className="text-xs font-semibold uppercase tracking-widest text-slate-400 mb-3">{label}</p>
+                <div className="flex flex-wrap gap-2">
+                  {items.map((item) => (
+                    <span
+                      key={item}
+                      className="inline-flex items-center rounded-full border border-slate-200/80 bg-slate-100 px-3 py-1 text-sm font-medium text-slate-700"
+                    >
+                      {item}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            ))}
           </div>
         </div>
 
+        {/* ── Contact ── */}
         <div className="mt-20 rounded-[2rem] border border-white/10 bg-slate-900/95 p-10 text-slate-100 shadow-2xl shadow-slate-950/40">
           <div className="mx-auto max-w-4xl text-center">
-            <p className="text-sm uppercase tracking-[0.32em] text-sky-300">Let’s connect</p>
+            <p className="text-sm uppercase tracking-[0.32em] text-sky-300">Get in touch</p>
             <h2 className="mt-4 text-3xl font-semibold tracking-tight text-white sm:text-4xl">
-              Ready to build something meaningful together?
+              Let's build something together
             </h2>
             <p className="mt-4 text-base leading-7 text-slate-300">
-              I’m open to internships, full-time opportunities, and collaborations where thoughtful engineering meets strong product design.
+              Whether you're hiring, starting something new, or just want to talk shop — my inbox is open.
             </p>
             <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row sm:justify-center">
               <a
-                href="mailto:hello@marcoscherillo.dev"
+                href="mailto:marcoscherillo98@gmail.com"
                 className="inline-flex items-center justify-center rounded-full bg-sky-500 px-6 py-3 text-sm font-semibold text-white transition hover:bg-sky-400"
               >
                 Say hello
@@ -179,6 +187,7 @@ export default function Home() {
           </div>
         </div>
 
+        {/* ── Projects ── */}
         <div className="mt-20">
           <Projects />
         </div>
