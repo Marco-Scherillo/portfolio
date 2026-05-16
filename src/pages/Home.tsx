@@ -3,6 +3,7 @@ import Projects from "../components/Projects";
 import About from "../components/about";
 import { FaGithub, FaLinkedin, FaPenNib, FaEnvelope } from "react-icons/fa";
 import njitSeal from "../assets/New_Jersey_IT_seal.svg.png";
+import profilePic from "../assets/naturepic.JPG";
 import { Link } from "react-router-dom";
 
 const scrollToSection = (sectionId: string, event: MouseEvent<HTMLAnchorElement>) => {
@@ -35,7 +36,7 @@ export default function Home() {
 
         {/* ── Hero ── */}
         <section className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-slate-900/90 p-8 shadow-2xl shadow-slate-950/40 backdrop-blur sm:p-12">
-          <div className="grid gap-10 lg:grid-cols-[1.9fr_1.1fr] lg:items-center">
+          <div className="grid gap-10 lg:grid-cols-[1.4fr_auto_1fr] lg:items-center">
             <div>
               <div className="inline-flex items-center gap-2.5 rounded-full bg-white/10 px-4 py-2 text-sm text-sky-200 ring-1 ring-white/10">
                 <span className="h-2 w-2 rounded-full bg-emerald-400 animate-pulse" />
@@ -46,7 +47,7 @@ export default function Home() {
                 Marco Scherillo
               </h1>
 
-              <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-300">
+              <p className="mt-4 max-w-2xl text-lg leading-8 text-slate-300">
                 I specialize in end-to-end software engineering — from low-level algorithms and distributed systems
                 to intuitive, responsive interfaces. I care about code that ships and software that lasts.
               </p>
@@ -97,6 +98,16 @@ export default function Home() {
                   <span className="ml-2 text-sm">Email</span>
                 </a>
               </div>
+
+            </div>
+
+            {/* ── Profile photo ── */}
+            <div className="flex justify-center">
+              <img
+                src={profilePic}
+                alt="Marco Scherillo"
+                className="h-72 w-52 rounded-2xl object-cover object-top border border-white/10 shadow-xl"
+              />
             </div>
 
             {/* ── Snapshot card ── */}
